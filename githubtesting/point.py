@@ -11,18 +11,6 @@ class Point:
         self.y+=vy
         self.z+=vz
         return self
-<<<<<<< HEAD
-=======
-    
-    def distance_to(self, other: 'Point') -> float:
-        """Calculate the Euclidean distance to another point."""
-        return math.sqrt((self.x - other.x) ** 2 +
-                    (self.y - other.y) ** 2 +
-                    (self.z - other.z) ** 2)
-    
-
-    
->>>>>>> feature1
 
     def mirror_about_plane(self, a: float, b: float, c: float, d: float) -> 'Point':
         """
@@ -43,3 +31,14 @@ class Point:
         z_mirrored = self.z - 2 * c * t
 
         return Point(x_mirrored, y_mirrored, z_mirrored)
+    
+    def distance_to(self, other: 'Point') -> float:
+        """Calculate the Euclidean distance to another point."""
+        return math.sqrt((self.x - other.x) ** 2 +
+                    (self.y - other.y) ** 2 +
+                    (self.z - other.z) ** 2)
+    
+
+    
+
+
