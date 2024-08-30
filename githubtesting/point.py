@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+import math
 @dataclass
 class Point:
     x:float
@@ -11,8 +11,7 @@ class Point:
         self.y+=vy
         self.z+=vz
         return self
-    
-    
+
     def mirror_about_plane(self, a: float, b: float, c: float, d: float) -> 'Point':
         """
         Mirrors this point about a plane defined by the equation ax + by + cz + d = 0.
@@ -32,5 +31,3 @@ class Point:
         z_mirrored = self.z - 2 * c * t
 
         return Point(x_mirrored, y_mirrored, z_mirrored)
-
-
